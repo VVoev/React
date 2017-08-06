@@ -1,12 +1,13 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
-import './App.css';
+import './Views/css/App.css';
 
 import ForecastView from './Views/ForecastView'
 import Towns from './Components/Towns'
 
 import $ from 'jquery'
 import WeatherRequester from '../src/Requester/WeatherRequester'
+
 
 export default class App extends Component {
     render() {
@@ -17,7 +18,7 @@ export default class App extends Component {
                 <Towns
                     getTownInfo={this.submitClicked.bind(this)}
                 />
-                <main id="main"></main>
+                <main id="main" className="container-fluid"></main>
             </div>
 
         );
