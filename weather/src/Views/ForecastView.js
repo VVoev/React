@@ -9,16 +9,17 @@ export default class ForecastView extends Component {
         let counter = 0;
         let name = this.props.name;
         let weatherRows = this.props.fullInfo.list.map(info =>
-        <tr className="table table-striped">
+            <tr className="table table-striped">
                 <td>{++counter}.</td>
-                <td>{parseFloat(info.main.temp_min-kelvin).toFixed(2)}</td>
-                <td>{parseFloat(info.main.temp_max-kelvin).toFixed(2)}</td>
+                <td>{parseFloat(info.main.temp_min - kelvin).toFixed(2)}</td>
+                <td>{parseFloat(info.main.temp_max - kelvin).toFixed(2)}</td>
                 <td>{parseFloat(info.wind.speed).toFixed(2)}</td>
                 <td>{parseFloat(info.main.humidity).toFixed(2)}%</td>
                 <td>{(info.weather[0].description)}</td>
                 <td>{info.dt_txt}</td>
             </tr>
         )
+
         return (
             <div className="table">
                 <h1>Weather Forecast</h1>

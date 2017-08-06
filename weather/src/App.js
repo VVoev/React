@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, {Component} from 'react';
 import ReactDOM from 'react-dom';
 import './Views/css/App.css';
 
@@ -7,7 +7,6 @@ import Towns from './Components/Towns'
 
 import $ from 'jquery'
 import WeatherRequester from '../src/Requester/WeatherRequester'
-
 
 export default class App extends Component {
     render() {
@@ -27,7 +26,7 @@ export default class App extends Component {
     showView(reactViewComponent) {
         ReactDOM.render(reactViewComponent,
             document.getElementById('main'));
-    }
+    };
 
     submitClicked() {
         let town = $('#town').val();
@@ -38,12 +37,11 @@ export default class App extends Component {
         function loadTownForRendering(townInfo) {
             this.showView(
                 <ForecastView
-                    fullInfo = {townInfo}
-                    name = {townInfo.city.name}
+                    fullInfo={townInfo}
+                    name={townInfo.city.name}
                 />
             )
-        }
-
+        };
     }
 
     handleAjaxError(event, response) {

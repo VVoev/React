@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
-import Bootstrap from 'bootstrap/dist/css/bootstrap.css'
-import WeatherRequester from '../Requester/WeatherRequester'
-import $ from 'jquery'
+import Bootstrap from 'bootstrap/dist/css/bootstrap.css';
+import WeatherRequester from '../Requester/WeatherRequester';
+import $ from 'jquery';
 
 export default class Towns extends Component {
     render() {
@@ -19,6 +19,4 @@ export default class Towns extends Component {
             </div>
         )
     }
-
-
 }
